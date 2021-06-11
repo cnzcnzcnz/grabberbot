@@ -27,7 +27,5 @@ foreach($result as $keySuggest=>$value){
         $testSpecialChar = htmlspecialchars("<img src=".$image["url"]." title=".$image["title"]." alt=".$image["alt"].">"."<br><small>".$image["title"]."</small><br>");
         echo $testSpecialChar;
     }
-
-
-// }
+}
 
