@@ -22,6 +22,7 @@ $myfile = fopen("post.txt", "w") or die("Unable to open file!");
 
 
 foreach($result as $keySuggest=>$value){
+    $myfile = fopen("$value.txt", "w") or die("Unable to open file!");
     // echo "<br> $value <br>";
     // $sentences = $finder->findSentence($value);
     // foreach($sentences as $keySentences=>$valueSentence){
@@ -33,9 +34,10 @@ foreach($result as $keySuggest=>$value){
     foreach($images as $keyImage=>$image){
         $testSpecialChar = htmlspecialchars("<img src=".$image["url"]." title=".$image["title"]." alt=".$image["alt"]."><br>"."<small>".$image["title"]."</small><br>");
         fwrite($myfile, $testSpecialChar);
+        fclose($myfile);
         // echo $testSpecialChar;
     }
 }
 
-fclose($myfile);
+
 
