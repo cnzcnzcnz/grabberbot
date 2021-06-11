@@ -22,7 +22,7 @@ $grabber = new GoogleImageGrabber();
 
 
 foreach($result as $keySuggest=>$value){
-    $myfile = fopen("$value.txt", "w") or die("Unable to open file!");
+    $myfile = fopen("$value.html", "w") or die("Unable to open file!");
     // echo "<br> $value <br>";
     // $sentences = $finder->findSentence($value);
     // foreach($sentences as $keySentences=>$valueSentence){
