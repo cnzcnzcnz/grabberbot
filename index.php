@@ -13,7 +13,7 @@ $result = GoogleSuggest::grab("speaker");
 $finder = new SentenceFinder;
 $grabber = new GoogleImageGrabber();
 
-$myfile = fopen("post.txt", "w") or die("Unable to open file!");
+// $myfile = fopen("post.txt", "w") or die("Unable to open file!");
 // $txt = "John Doe\n";
 // fwrite($myfile, $txt);
 // $txt = "Jane Doe\n";
@@ -34,9 +34,10 @@ foreach($result as $keySuggest=>$value){
     foreach($images as $keyImage=>$image){
         $testSpecialChar = htmlspecialchars("<img src=".$image["url"]." title=".$image["title"]." alt=".$image["alt"]."><br>"."<small>".$image["title"]."</small><br>");
         fwrite($myfile, $testSpecialChar);
-        fclose($myfile);
+        
         // echo $testSpecialChar;
     }
+    fclose($myfile);
 }
 
 
