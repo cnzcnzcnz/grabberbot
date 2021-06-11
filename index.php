@@ -15,13 +15,12 @@ $grabber = new GoogleImageGrabber();
 
 
 foreach($result as $keySuggest=>$value){
-    echo $value. "<br>";
-    echo "<br> Keywordnya <b>$value</b> <br>";
-    $sentences = $finder->findSentence($value);
-    foreach($sentences as $keySentences=>$valueSentence){
-        $valueSentence .= " $valueSentence";
-        echo "<p>". $valueSentence ."</p>";
-    }
+    echo "<br> $value <br>";
+    // $sentences = $finder->findSentence($value);
+    // foreach($sentences as $keySentences=>$valueSentence){
+    //     $valueSentence .= " $valueSentence";
+    //     echo "<p>". $valueSentence ."</p>";
+    // }
     $images = GoogleImageGrabber::grab("$value");
     foreach($images as $keyImage=>$image){
         $testSpecialChar = htmlspecialchars("<img src=".$image["url"]." title=".$image["title"]." alt=".$image["alt"].">"."<br><small>".$image["title"]."</small><br>");
