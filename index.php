@@ -18,7 +18,7 @@ $myfile = fopen("post.txt", "w") or die("Unable to open file!");
 // fwrite($myfile, $txt);
 // $txt = "Jane Doe\n";
 // fwrite($myfile, $txt);
-fclose($myfile);
+// fclose($myfile);
 
 
 foreach($result as $keySuggest=>$value){
