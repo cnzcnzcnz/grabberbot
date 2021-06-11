@@ -9,7 +9,7 @@ use Buchin\SentenceFinder\SentenceFinder;
 
 // $suggestion = new GoogleSuggest();
 
-$result = GoogleSuggest::grab("speaker");
+$result = GoogleSuggest::grab("speaker", "114.7.27.98:8080");
 $finder = new SentenceFinder;
 $grabber = new GoogleImageGrabber();
 
