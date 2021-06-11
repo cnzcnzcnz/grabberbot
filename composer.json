@@ -1,0 +1,9 @@
+{
+    "require": {
+        "buchin/google-image-grabber": "dev-master",
+        "buchin/searchterm": "dev-master",
+        "buchin/google-suggest": "dev-master",
+        "buchin/sentence-finder": "dev-master",
+        "buchin/badwords": "dev-master"
+    }
+}
