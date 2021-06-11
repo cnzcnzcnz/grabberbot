@@ -22,7 +22,7 @@ $myfile = fopen("post.txt", "w") or die("Unable to open file!");
 
 
 foreach($result as $keySuggest=>$value){
-    echo "<br> $value <br>";
+    // echo "<br> $value <br>";
     // $sentences = $finder->findSentence($value);
     // foreach($sentences as $keySentences=>$valueSentence){
     //     $valueSentence .= " $valueSentence";
