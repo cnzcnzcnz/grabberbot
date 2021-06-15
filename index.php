@@ -27,11 +27,11 @@ foreach($lines as $word){
         foreach($images as $keyImage=>$image){
             if($keyImage === 1){
             $testSpecialChar = htmlspecialchars("<div itemscope itemtype=http://schema.org/Quotation style=margin-bottom:20px;><div itemid=".$image["url"]." itemprop=associatedMedia itemscope itemtype=http://schema.org/ImageObject><img alt='".$image["alt"]."' itemprop=contentUrl src='".$image["url"]."' style='width: 100%;' title='".$image["title"]. "' width=".$image["width"]." height=".$image["height"]." ></div><h4 itemprop=name id='".$image["title"]."'>".$image["title"]."</h4><p itemprop=description></p></div>");
-            echo $testSpecialChar;
+           // echo $testSpecialChar;
             fwrite($myfile, $testSpecialChar);
         }
-        fclose($myfile);
-    }
+	}
+	fclose($myfile);
     }
 }
 
